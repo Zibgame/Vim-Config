@@ -48,11 +48,12 @@ Plug 'sheerun/vim-polyglot'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} " Pour NeoVim uniquement
 
 " Autocompletion intelligente
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Other fun
 Plug 'mhinz/vim-startify'
 Plug 'psliwka/vim-smoothie'
+Plug 'Zibgame/Vim-C_compiler'
 
 call plug#end()
 
@@ -61,7 +62,7 @@ call plug#end()
 " =======================
 
 " Utiliser tab pour naviguer les suggestions Coc
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : CheckBackspace() ? "\<TAB>" : coc#refresh()
+"inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : CheckBackspace() ? "\<TAB>" : coc#refresh()
 
 function! CheckBackspace() abort
   let col = col('.') - 1
@@ -123,7 +124,7 @@ let g:startify_custom = [
 " Mappings globaux (hors Startify)
 nnoremap <leader>m :call StartifyMenu()<CR>
 nnoremap <leader>p :PlugStatus<CR>
-nnoremap <leader>c :CocList extensions<CR>
+"nnoremap <leader>c :CocList extensions<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 " Mappings spécifiques dans le buffer Startify (pour que p, c, n fonctionnent dans Startify)
@@ -134,7 +135,7 @@ augroup END
 
 function! StartifyMappings()
   nnoremap <buffer> p :PlugStatus<CR>
-  nnoremap <buffer> c :CocList extensions<CR>
+  "nnoremap <buffer> c :CocList extensions<CR>
   nnoremap <buffer> n :NERDTreeToggle<CR>
 endfunction
 
