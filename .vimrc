@@ -54,6 +54,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-startify'
 Plug 'psliwka/vim-smoothie'
 Plug 'Zibgame/Vim-C_compiler'
+Plug'flazz/vim-colorschemes'
 
 call plug#end()
 
